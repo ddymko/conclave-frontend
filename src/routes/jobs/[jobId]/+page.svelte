@@ -1,6 +1,6 @@
 <script lang="ts">
     export let data;
-    const { jobData } = data;
+    const { jobData, jobScript, jobEnvVars } = data;
 
     // Convert epoch timestamps to human-readable format
     function formatTimestamp(epochTime: bigint) {
@@ -181,12 +181,23 @@
             </div>
             <div class="px-4 py-5 sm:p-6">
                 <pre class="bg-gray-100 p-4 rounded text-sm overflow-auto">
-[Job Script]
+                { jobScript.toString() }
                 </pre>
             </div>
         </div>
     </section>
-
+    <section class="mb-6">
+        <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-50 border border-gray-200 shadow-sm">
+            <div class="px-4 py-5 sm:px-6">
+                <h2 class="text-lg font-medium text-gray-900">Job Env Vars</h2>
+            </div>
+            <div class="px-4 py-5 sm:p-6">
+                <pre class="bg-gray-100 p-4 rounded text-sm overflow-auto">
+                { jobEnvVars.toString() }
+                </pre>
+            </div>
+        </div>
+    </section>
     <!-- Action Buttons -->
     <section class="flex space-x-4">
         <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">

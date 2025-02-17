@@ -51,7 +51,7 @@
                                     <!-- Example Top-level Item for Mobile -->
                                     <li>
                                         <a
-                                                href="#"
+                                                href="/"
                                                 class="group flex gap-x-3 rounded-md bg-gray-800 p-2 text-sm/6 font-semibold text-white"
                                         >
                                             <svg
@@ -96,7 +96,7 @@
                     <!-- 1. Cluster Overview & Monitoring -->
                     <li>
                         <a
-                                href="#"
+                                href="/"
                                 class="group flex gap-x-3 rounded-md bg-gray-800 p-2 text-sm/6 font-semibold text-white"
                         >
                             <svg
@@ -170,18 +170,10 @@
                         <ul class="ml-4 mt-1 space-y-1">
                             <li>
                                 <a
-                                        href="/jobs/dashboard"
+                                        href="/jobs"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
-                                    Job Queue Dashboard
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        href="/jobs/details"
-                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
-                                >
-                                    Job Details
+                                    Jobs Dashboard
                                 </a>
                             </li>
                             <li>
