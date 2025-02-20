@@ -4,7 +4,7 @@
 
     const {accountsData} = data;
 </script>
-<nav class="flex border-b border-gray-200 bg-white" aria-label="Breadcrumb">
+<nav class="flex border-b border-gray-200 bg-white mb-8" aria-label="Breadcrumb">
     <ol role="list" class="mx-auto flex w-full max-w-(--breakpoint-xl) space-x-4 px-4 sm:px-6 lg:px-8">
         <li class="flex">
             <div class="flex items-center">
@@ -40,10 +40,10 @@
                 email and role.</p>
         </div>
         <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-            <button type="button"
-                    class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <a href="/entities/accounts/add"
+               class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                 Add Account
-            </button>
+            </a>
         </div>
     </div>
     <div class="mt-8 flow-root">

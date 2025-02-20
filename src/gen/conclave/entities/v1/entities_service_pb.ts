@@ -15,6 +15,14 @@ import type { GetAccountRequestSchema } from "./get_account_request_pb";
 import { file_conclave_entities_v1_get_account_request } from "./get_account_request_pb";
 import type { GetAccountResponseSchema } from "./get_account_response_pb";
 import { file_conclave_entities_v1_get_account_response } from "./get_account_response_pb";
+import type { DeleteAccountRequestSchema } from "./delete_account_request_pb";
+import { file_conclave_entities_v1_delete_account_request } from "./delete_account_request_pb";
+import type { DeleteAccountResponseSchema } from "./delete_account_response_pb";
+import { file_conclave_entities_v1_delete_account_response } from "./delete_account_response_pb";
+import type { CreateAccountRequestSchema } from "./create_account_request_pb";
+import { file_conclave_entities_v1_create_account_request } from "./create_account_request_pb";
+import type { CreateAccountResponseSchema } from "./create_account_response_pb";
+import { file_conclave_entities_v1_create_account_response } from "./create_account_response_pb";
 import type { GetUsersRequestSchema } from "./get_users_request_pb";
 import { file_conclave_entities_v1_get_users_request } from "./get_users_request_pb";
 import type { GetUsersResponseSchema } from "./get_users_response_pb";
@@ -28,7 +36,7 @@ import { file_conclave_entities_v1_get_user_response } from "./get_user_response
  * Describes the file conclave/entities/v1/entities_service.proto.
  */
 export const file_conclave_entities_v1_entities_service: GenFile = /*@__PURE__*/
-  fileDesc("Citjb25jbGF2ZS9lbnRpdGllcy92MS9lbnRpdGllc19zZXJ2aWNlLnByb3RvEhRjb25jbGF2ZS5lbnRpdGllcy52MTKRAwoPRW50aXRpZXNTZXJ2aWNlEmQKC0dldEFjY291bnRzEiguY29uY2xhdmUuZW50aXRpZXMudjEuR2V0QWNjb3VudHNSZXF1ZXN0GikuY29uY2xhdmUuZW50aXRpZXMudjEuR2V0QWNjb3VudHNSZXNwb25zZSIAEmEKCkdldEFjY291bnQSJy5jb25jbGF2ZS5lbnRpdGllcy52MS5HZXRBY2NvdW50UmVxdWVzdBooLmNvbmNsYXZlLmVudGl0aWVzLnYxLkdldEFjY291bnRSZXNwb25zZSIAElsKCEdldFVzZXJzEiUuY29uY2xhdmUuZW50aXRpZXMudjEuR2V0VXNlcnNSZXF1ZXN0GiYuY29uY2xhdmUuZW50aXRpZXMudjEuR2V0VXNlcnNSZXNwb25zZSIAElgKB0dldFVzZXISJC5jb25jbGF2ZS5lbnRpdGllcy52MS5HZXRVc2VyUmVxdWVzdBolLmNvbmNsYXZlLmVudGl0aWVzLnYxLkdldFVzZXJSZXNwb25zZSIAQktaSWdpdGh1Yi5jb20vZGR5bWtvL2NvbmNsYXZlLWJhY2tlbmQvZ2VuL2dvL2NvbmNsYXZlL2VudGl0aWVzL3YxO2VudGl0aWVzdjFiBnByb3RvMw", [file_conclave_entities_v1_get_accounts_request, file_conclave_entities_v1_get_accounts_response, file_conclave_entities_v1_get_account_request, file_conclave_entities_v1_get_account_response, file_conclave_entities_v1_get_users_request, file_conclave_entities_v1_get_users_response, file_conclave_entities_v1_get_user_request, file_conclave_entities_v1_get_user_response]);
+  fileDesc("Citjb25jbGF2ZS9lbnRpdGllcy92MS9lbnRpdGllc19zZXJ2aWNlLnByb3RvEhRjb25jbGF2ZS5lbnRpdGllcy52MTLpBAoPRW50aXRpZXNTZXJ2aWNlEmQKC0dldEFjY291bnRzEiguY29uY2xhdmUuZW50aXRpZXMudjEuR2V0QWNjb3VudHNSZXF1ZXN0GikuY29uY2xhdmUuZW50aXRpZXMudjEuR2V0QWNjb3VudHNSZXNwb25zZSIAEmEKCkdldEFjY291bnQSJy5jb25jbGF2ZS5lbnRpdGllcy52MS5HZXRBY2NvdW50UmVxdWVzdBooLmNvbmNsYXZlLmVudGl0aWVzLnYxLkdldEFjY291bnRSZXNwb25zZSIAEmoKDUNyZWF0ZUFjY291bnQSKi5jb25jbGF2ZS5lbnRpdGllcy52MS5DcmVhdGVBY2NvdW50UmVxdWVzdBorLmNvbmNsYXZlLmVudGl0aWVzLnYxLkNyZWF0ZUFjY291bnRSZXNwb25zZSIAEmoKDURlbGV0ZUFjY291bnQSKi5jb25jbGF2ZS5lbnRpdGllcy52MS5EZWxldGVBY2NvdW50UmVxdWVzdBorLmNvbmNsYXZlLmVudGl0aWVzLnYxLkRlbGV0ZUFjY291bnRSZXNwb25zZSIAElsKCEdldFVzZXJzEiUuY29uY2xhdmUuZW50aXRpZXMudjEuR2V0VXNlcnNSZXF1ZXN0GiYuY29uY2xhdmUuZW50aXRpZXMudjEuR2V0VXNlcnNSZXNwb25zZSIAElgKB0dldFVzZXISJC5jb25jbGF2ZS5lbnRpdGllcy52MS5HZXRVc2VyUmVxdWVzdBolLmNvbmNsYXZlLmVudGl0aWVzLnYxLkdldFVzZXJSZXNwb25zZSIAQktaSWdpdGh1Yi5jb20vZGR5bWtvL2NvbmNsYXZlLWJhY2tlbmQvZ2VuL2dvL2NvbmNsYXZlL2VudGl0aWVzL3YxO2VudGl0aWVzdjFiBnByb3RvMw", [file_conclave_entities_v1_get_accounts_request, file_conclave_entities_v1_get_accounts_response, file_conclave_entities_v1_get_account_request, file_conclave_entities_v1_get_account_response, file_conclave_entities_v1_delete_account_request, file_conclave_entities_v1_delete_account_response, file_conclave_entities_v1_create_account_request, file_conclave_entities_v1_create_account_response, file_conclave_entities_v1_get_users_request, file_conclave_entities_v1_get_users_response, file_conclave_entities_v1_get_user_request, file_conclave_entities_v1_get_user_response]);
 
 /**
  * EntitiesService provides RPC methods for retrieving and managing slurm entities.
@@ -55,6 +63,26 @@ export const EntitiesService: GenService<{
     methodKind: "unary";
     input: typeof GetAccountRequestSchema;
     output: typeof GetAccountResponseSchema;
+  },
+  /**
+   * CreateAccount creates a new account based on the provided request.
+   *
+   * @generated from rpc conclave.entities.v1.EntitiesService.CreateAccount
+   */
+  createAccount: {
+    methodKind: "unary";
+    input: typeof CreateAccountRequestSchema;
+    output: typeof CreateAccountResponseSchema;
+  },
+  /**
+   * DeleteAccount deletes a single account based on the provided request.
+   *
+   * @generated from rpc conclave.entities.v1.EntitiesService.DeleteAccount
+   */
+  deleteAccount: {
+    methodKind: "unary";
+    input: typeof DeleteAccountRequestSchema;
+    output: typeof DeleteAccountResponseSchema;
   },
   /**
    * GetUsers retrieves a list of users.

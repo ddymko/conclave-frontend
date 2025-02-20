@@ -4,7 +4,7 @@
 
     console.log(usersData)
 </script>
-<nav class="flex border-b border-gray-200 bg-white" aria-label="Breadcrumb">
+<nav class="flex border-b border-gray-200 bg-white mb-8" aria-label="Breadcrumb">
     <ol role="list" class="mx-auto flex w-full max-w-(--breakpoint-xl) space-x-4 px-4 sm:px-6 lg:px-8">
         <li class="flex">
             <div class="flex items-center">

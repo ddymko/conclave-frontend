@@ -23,6 +23,10 @@ import { type GetUsersRequest } from '../gen/conclave/entities/v1/get_users_requ
 import { type GetUsersResponse } from '../gen/conclave/entities/v1/get_users_response_pb';
 import { type GetUserRequest } from '../gen/conclave/entities/v1/get_user_request_pb';
 import { type GetUserResponse } from '../gen/conclave/entities/v1/get_user_response_pb';
+import {type DeleteAccountRequest} from "../gen/conclave/entities/v1/delete_account_request_pb";
+import {type DeleteAccountResponse} from "../gen/conclave/entities/v1/delete_account_response_pb";
+import {type CreateAccountRequest} from "../gen/conclave/entities/v1/create_account_request_pb";
+import {type CreateAccountResponse} from "../gen/conclave/entities/v1/create_account_response_pb";
 import { ConnectError, Code } from '@connectrpc/connect';
 
 /**
@@ -156,10 +160,6 @@ export async function fetchAccount(accountName: string): Promise<GetAccountRespo
 		const request: GetAccountRequest = {
 			$typeName: 'conclave.entities.v1.GetAccountRequest',
 			accountName
-			// accountName: {
-			// 	$typeName: 'conclave.entities.v1.AccountName',
-			// 	accountName: accountName
-			// }
 		};
 		return await myEntitiesService.getAccount(request);
 	} catch (err) {
@@ -173,6 +173,51 @@ export async function fetchAccount(accountName: string): Promise<GetAccountRespo
 			// };
 		}
 
+		throw err;
+	}
+}
+
+export async function deleteAccount(accountName: string): Promise<DeleteAccountResponse> {
+	try {
+		const request: DeleteAccountRequest = {
+			$typeName: 'conclave.entities.v1.DeleteAccountRequest',
+			accountName
+		};
+		return await myEntitiesService.deleteAccount(request);
+	} catch (err) {
+		if (err instanceof ConnectError && err.code === Code.NotFound) {
+			console.warn(`No Account data found`, err);
+			// Return a fallback response with a default message.
+			// return {
+			// 	$typeName: 'conclave.jobs.v1.GetJobScriptResponse',
+			// 	script: new TextEncoder().encode("no script data available"),
+			// 	envVars: new TextEncoder().encode("no env var data available") // Or provide appropriate fallback data
+			// };
+		}
+
+		throw err;
+	}
+}
+
+export async function createAccount(accountName: string, organization?: string, description?: string): Promise<CreateAccountResponse> {
+	try {
+		const request: CreateAccountRequest = {
+			$typeName: "conclave.entities.v1.CreateAccountRequest",
+			account: {
+				$typeName: "conclave.entities.v1.Account",
+				name: accountName,
+				organization: organization || "",
+				description: description || "",
+				associations: []
+			}
+		};
+		return await myEntitiesService.createAccount(request);
+	} catch (err) {
+		if (err instanceof ConnectError && err.code === Code.AlreadyExists) {
+			console.warn(`Account '${accountName}' already exists.`, err);
+		} else {
+			console.error(`Failed to create account '${accountName}':`, err);
+		}
 		throw err;
 	}
 }
