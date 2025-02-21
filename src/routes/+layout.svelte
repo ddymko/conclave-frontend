@@ -215,40 +215,32 @@
                                         d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
                                 />
                             </svg>
-                            User-Focused Features
+                            Entities
                         </a>
                         <!-- Nested subsections for User-Focused Features -->
                         <ul class="ml-4 mt-1 space-y-1">
                             <li>
                                 <a
-                                        href="/user/profile"
+                                        href="/entities/accounts"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
-                                    User Profile &amp; Quota
+                                    Accounts
                                 </a>
                             </li>
                             <li>
                                 <a
-                                        href="/user/submit"
+                                        href="/entities/associations"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
-                                    Job Submission Wizard
+                                    Associations
                                 </a>
                             </li>
                             <li>
                                 <a
-                                        href="/user/reservations"
+                                        href="/entities/users"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
-                                    Resource Reservation
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        href="/user/notifications"
-                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
-                                >
-                                    Notifications &amp; Messaging
+                                    Users
                                 </a>
                             </li>
                         </ul>
