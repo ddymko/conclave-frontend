@@ -4,7 +4,7 @@ import {
 	myClusterService,
 	myEntitiesService,
 	nodesService,
-	partitionsService
+	partitionsService, qosService
 } from '$lib/conclaveClient';
 import {
 	type GetJobDataRequest,
@@ -41,6 +41,11 @@ import {type GetPartitionRequest} from "../gen/conclave/partitions/v1/get_pariti
 import {type GetPartitionResponse} from "../gen/conclave/partitions/v1/get_partition_response_pb";
 import {type GetPartitionsResponse} from "../gen/conclave/partitions/v1/get_partitions_response_pb";
 import {type GetPartitionsRequest} from "../gen/conclave/partitions/v1/get_partitions_request_pb";
+import {type GetQossRequest} from "../gen/conclave/qos/v1/get_qoss_request_pb";
+import {type GetQossResponse} from "../gen/conclave/qos/v1/get_qoss_response_pb";
+import {type GetQosRequest} from "../gen/conclave/qos/v1/get_qos_request_pb";
+import {type GetQosResponse} from "../gen/conclave/qos/v1/get_qos_response_pb";
+
 import { ConnectError, Code } from '@connectrpc/connect';
 
 /**
@@ -311,6 +316,34 @@ export async function fetchPartition(name: string): Promise<GetPartitionResponse
 	try {
 		const request: GetPartitionRequest = {$typeName: "conclave.partitions.v1.GetPartitionRequest", name};
 		return await partitionsService.getPartition(request);
+	} catch (err) {
+		if (err instanceof ConnectError && err.code === Code.AlreadyExists) {
+			console.warn(`ps issue.`, err);
+		} else {
+			console.error(`ps issue 2':`, err);
+		}
+		throw err;
+	}
+}
+
+export async function fetchQoss(): Promise<GetQossResponse> {
+	try {
+		const request: GetQossRequest = {$typeName: "conclave.qos.v1.GetQossRequest"};
+		return await qosService.getQoss(request);
+	} catch (err) {
+		if (err instanceof ConnectError && err.code === Code.AlreadyExists) {
+			console.warn(`qos issue.`, err);
+		} else {
+			console.error(`ps issue 2':`, err);
+		}
+		throw err;
+	}
+}
+
+export async function fetchQos(name: string): Promise<GetQosResponse> {
+	try {
+		const request: GetQosRequest = {$typeName: "conclave.qos.v1.GetQosRequest", name};
+		return await qosService.getQos(request);
 	} catch (err) {
 		if (err instanceof ConnectError && err.code === Code.AlreadyExists) {
 			console.warn(`ps issue.`, err);

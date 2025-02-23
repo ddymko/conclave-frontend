@@ -135,10 +135,10 @@
                             </li>
                             <li>
                                 <a
-                                        href="/cluster/health"
+                                        href="/cluster/qos"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
-                                    Health &amp; Alerting
+                                    QOS Summary
                                 </a>
                             </li>
                             <li>
