@@ -38,6 +38,7 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "@connectrpc/connect-web": "^2.0.0"
+    "@connectrpc/connect-web": "^2.0.0",
+    "d3": "^7.9.0"
   }
 }

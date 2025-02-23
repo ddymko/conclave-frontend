@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file conclave/cluster/v1/tres.proto.
  */
 export const file_conclave_cluster_v1_tres: GenFile = /*@__PURE__*/
-  fileDesc("Ch5jb25jbGF2ZS9jbHVzdGVyL3YxL3RyZXMucHJvdG8SE2NvbmNsYXZlLmNsdXN0ZXIudjEiMQoEVHJlcxIMCgR0eXBlGAEgASgJEgwKBG5hbWUYAiABKAkSDQoFY291bnQYAyABKANCSVpHZ2l0aHViLmNvbS9kZHlta28vY29uY2xhdmUtYmFja2VuZC9nZW4vZ28vY29uY2xhdmUvY2x1c3Rlci92MTtjbHVzdGVydjFiBnByb3RvMw");
+  fileDesc("Ch5jb25jbGF2ZS9jbHVzdGVyL3YxL3RyZXMucHJvdG8SE2NvbmNsYXZlLmNsdXN0ZXIudjEiPQoEVHJlcxIMCgR0eXBlGAEgASgJEgwKBG5hbWUYAiABKAkSDQoFY291bnQYAyABKAMSCgoCaWQYBCABKAVCSVpHZ2l0aHViLmNvbS9kZHlta28vY29uY2xhdmUtYmFja2VuZC9nZW4vZ28vY29uY2xhdmUvY2x1c3Rlci92MTtjbHVzdGVydjFiBnByb3RvMw");
 
 /**
  * Tres aka Trackable Resource for slurm
@@ -38,6 +38,11 @@ export type Tres = Message<"conclave.cluster.v1.Tres"> & {
    * @generated from field: int64 count = 3;
    */
   count: bigint;
+
+  /**
+   * @generated from field: int32 id = 4;
+   */
+  id: number;
 };
 
 /**

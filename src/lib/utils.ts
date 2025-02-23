@@ -2,6 +2,10 @@
 
 export function convertJobState(state: number): string {
     switch (state) {
+        case 0:
+            return "Pending";
+        case 1:
+            return "Running";
         case 3:
             return 'Completed';
         case 4:
