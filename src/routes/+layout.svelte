@@ -119,6 +119,14 @@
                         <ul class="ml-4 mt-1 space-y-1">
                             <li>
                                 <a
+                                        href="/cluster/nodes"
+                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+                                >
+                                    Node Management
+                                </a>
+                            </li>
+                            <li>
+                                <a
                                         href="/cluster/realtime"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
@@ -135,10 +143,18 @@
                             </li>
                             <li>
                                 <a
+                                        href="/cluster/tres"
+                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+                                >
+                                    TRES Summary
+                                </a>
+                            </li>
+                            <li>
+                                <a
                                         href="/cluster/partitions"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
-                                    Partition / Queue Summary
+                                    Partition Summary
                                 </a>
                             </li>
                         </ul>
@@ -284,14 +300,6 @@
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
                                     Fairshare &amp; Accounting
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        href="/admin/nodes"
-                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
-                                >
-                                    Node Management
                                 </a>
                             </li>
                             <li>

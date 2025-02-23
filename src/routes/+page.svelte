@@ -52,7 +52,7 @@
 </nav>
 
 <div>
-    <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
+    <dl class="mt-5 grid grid-cols-1 gap-7 sm:grid-cols-3">
         <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow-sm sm:p-6">
             <dt class="truncate text-sm font-medium text-gray-500">Total Nodes</dt>
             <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ tresData.node.count }</dd>
@@ -62,9 +62,10 @@
             <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ tresData.cpu.count}</dd>
         </div>
         <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow-sm sm:p-6">
-            <dt class="truncate text-sm font-medium text-gray-500">Total Memory (MB) </dt>
+            <dt class="truncate text-sm font-medium text-gray-500">Total Memory (GB) </dt>
             <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ convertMbToGb(tresData.mem.count)}</dd>
         </div>
+
     </dl>
     <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-7">
         <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow-sm sm:p-6">
@@ -88,8 +89,12 @@
             <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ stateCount.get("Timeout")}</dd>
         </div>
         <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow-sm sm:p-6">
+            <dt class="truncate text-sm font-medium text-gray-500">Jobs Pending</dt>
+            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ stateCount.get("Pending")}</dd>
+        </div>
+        <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow-sm sm:p-6">
             <dt class="truncate text-sm font-medium text-gray-500">Jobs Running</dt>
-            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">TODOs</dd>
+            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ stateCount.get("Running")}</dd>
         </div>
     </dl>
 </div>

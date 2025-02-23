@@ -10,7 +10,28 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file conclave/entities/v1/association.proto.
  */
 export const file_conclave_entities_v1_association: GenFile = /*@__PURE__*/
-  fileDesc("CiZjb25jbGF2ZS9lbnRpdGllcy92MS9hc3NvY2lhdGlvbi5wcm90bxIUY29uY2xhdmUuZW50aXRpZXMudjEiUAoLQXNzb2NpYXRpb24SDwoHYWNjb3VudBgBIAEoCRIPCgdjbHVzdGVyGAIgASgJEhEKCXBhcnRpdGlvbhgDIAEoCRIMCgR1c2VyGAQgASgJIjQKEkRlZmF1bHRBc3NvY2lhdGlvbhIPCgdhY2NvdW50GAEgASgJEg0KBXdja2V5GAIgASgJQktaSWdpdGh1Yi5jb20vZGR5bWtvL2NvbmNsYXZlLWJhY2tlbmQvZ2VuL2dvL2NvbmNsYXZlL2VudGl0aWVzL3YxO2VudGl0aWVzdjFiBnByb3RvMw");
+  fileDesc("CiZjb25jbGF2ZS9lbnRpdGllcy92MS9hc3NvY2lhdGlvbi5wcm90bxIUY29uY2xhdmUuZW50aXRpZXMudjEiRwoMQXNzb2NpYXRpb25zEjcKDGFzc29jaWF0aW9ucxgBIAMoCzIhLmNvbmNsYXZlLmVudGl0aWVzLnYxLkFzc29jaWF0aW9uIrsECgtBc3NvY2lhdGlvbhIPCgdhY2NvdW50GAEgASgJEg8KB2NsdXN0ZXIYAiABKAkSEQoJcGFydGl0aW9uGAMgASgJEgwKBHVzZXIYBCABKAkSMQoDbWF4GAUgASgLMiQuY29uY2xhdmUuZW50aXRpZXMudjEuQXNzb2NpYXRpb25NYXgSEgoKc2hhcmVzX3JhdxgGIAEoBRIWCg5wYXJlbnRfYWNjb3VudBgHIAEoCRISCgppc19kZWZhdWx0GAggASgIEg8KB2NvbW1lbnQYCSABKAkSLQoIcHJpb3JpdHkYCiABKAsyGy5jb25jbGF2ZS5lbnRpdGllcy52MS5MaW1pdBILCgNxb3MYCyADKAkSDwoHbGluZWFnZRgMIAEoCRI0CgphY2NvdW50aW5nGA0gAygLMiAuY29uY2xhdmUuZW50aXRpZXMudjEuQWNjb3VudGluZxI/CgdkZWZhdWx0GA4gAygLMi4uY29uY2xhdmUuZW50aXRpZXMudjEuQXNzb2NpYXRpb24uRGVmYXVsdEVudHJ5Eg0KBWZsYWdzGA8gAygJEi8KAmlkGBAgASgLMiMuY29uY2xhdmUuZW50aXRpZXMudjEuQXNzb2NpYXRpb25JRBIxCgNtaW4YESABKAsyJC5jb25jbGF2ZS5lbnRpdGllcy52MS5Bc3NvY2lhdGlvbk1pbhouCgxEZWZhdWx0RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASI0ChJEZWZhdWx0QXNzb2NpYXRpb24SDwoHYWNjb3VudBgBIAEoCRINCgV3Y2tleRgCIAEoCSJeCg1Bc3NvY2lhdGlvbklEEg8KB2FjY291bnQYASABKAkSDwoHY2x1c3RlchgCIAEoCRIRCglwYXJ0aXRpb24YAyABKAkSDAoEdXNlchgEIAEoCRIKCgJpZBgFIAEoBSJJCg5Bc3NvY2lhdGlvbk1pbhI3ChJwcmlvcml0eV90aHJlc2hvbGQYASABKAsyGy5jb25jbGF2ZS5lbnRpdGllcy52MS5MaW1pdCI2CgVMaW1pdBILCgNzZXQYASABKAgSEAoIaW5maW5pdGUYAiABKAgSDgoGbnVtYmVyGAMgASgFIooBCgpBY2NvdW50aW5nEjIKCWFsbG9jYXRlZBgBIAEoCzIfLmNvbmNsYXZlLmVudGl0aWVzLnYxLkFsbG9jYXRlZBIKCgJpZBgCIAEoBRINCgVzdGFydBgDIAEoBRItCgR0cmVzGAQgASgLMh8uY29uY2xhdmUuZW50aXRpZXMudjEuVHJlc0VudHJ5IhwKCUFsbG9jYXRlZBIPCgdzZWNvbmRzGAEgASgFIo8BCg5Bc3NvY2lhdGlvbk1heBIoCgRqb2JzGAEgASgLMhouY29uY2xhdmUuZW50aXRpZXMudjEuSm9icxIoCgR0cmVzGAIgASgLMhouY29uY2xhdmUuZW50aXRpZXMudjEuVHJlcxIpCgNwZXIYAyABKAsyHC5jb25jbGF2ZS5lbnRpdGllcy52MS5NYXhQZXIiugEKBEpvYnMSKgoDcGVyGAEgASgLMh0uY29uY2xhdmUuZW50aXRpZXMudjEuSm9ic1BlchIrCgZhY3RpdmUYAiABKAsyGy5jb25jbGF2ZS5lbnRpdGllcy52MS5MaW1pdBItCghhY2NydWluZxgDIAEoCzIbLmNvbmNsYXZlLmVudGl0aWVzLnYxLkxpbWl0EioKBXRvdGFsGAQgASgLMhsuY29uY2xhdmUuZW50aXRpZXMudjEuTGltaXQixQEKB0pvYnNQZXISKgoFY291bnQYASABKAsyGy5jb25jbGF2ZS5lbnRpdGllcy52MS5MaW1pdBItCghhY2NydWluZxgCIAEoCzIbLmNvbmNsYXZlLmVudGl0aWVzLnYxLkxpbWl0Ei4KCXN1Ym1pdHRlZBgDIAEoCzIbLmNvbmNsYXZlLmVudGl0aWVzLnYxLkxpbWl0Ei8KCndhbGxfY2xvY2sYBCABKAsyGy5jb25jbGF2ZS5lbnRpdGllcy52MS5MaW1pdCLGAQoEVHJlcxIuCgV0b3RhbBgBIAMoCzIfLmNvbmNsYXZlLmVudGl0aWVzLnYxLlRyZXNFbnRyeRIuCgVncm91cBgCIAEoCzIfLmNvbmNsYXZlLmVudGl0aWVzLnYxLlRyZXNHcm91cBIyCgdtaW51dGVzGAMgASgLMiEuY29uY2xhdmUuZW50aXRpZXMudjEuVHJlc01pbnV0ZXMSKgoDcGVyGAQgASgLMh0uY29uY2xhdmUuZW50aXRpZXMudjEuVHJlc1BlciJCCglUcmVzRW50cnkSDAoEdHlwZRgBIAEoCRIMCgRuYW1lGAIgASgJEgoKAmlkGAMgASgFEg0KBWNvdW50GAQgASgFIm4KCVRyZXNHcm91cBIwCgdtaW51dGVzGAEgAygLMh8uY29uY2xhdmUuZW50aXRpZXMudjEuVHJlc0VudHJ5Ei8KBmFjdGl2ZRgCIAMoCzIfLmNvbmNsYXZlLmVudGl0aWVzLnYxLlRyZXNFbnRyeSJwCgtUcmVzTWludXRlcxIuCgV0b3RhbBgBIAMoCzIfLmNvbmNsYXZlLmVudGl0aWVzLnYxLlRyZXNFbnRyeRIxCgNwZXIYAiABKAsyJC5jb25jbGF2ZS5lbnRpdGllcy52MS5UcmVzTWludXRlc1BlciI+Cg5UcmVzTWludXRlc1BlchIsCgNqb2IYASADKAsyHy5jb25jbGF2ZS5lbnRpdGllcy52MS5UcmVzRW50cnkiZgoHVHJlc1BlchIsCgNqb2IYASADKAsyHy5jb25jbGF2ZS5lbnRpdGllcy52MS5UcmVzRW50cnkSLQoEbm9kZRgCIAMoCzIfLmNvbmNsYXZlLmVudGl0aWVzLnYxLlRyZXNFbnRyeSJDCgZNYXhQZXISOQoHYWNjb3VudBgBIAEoCzIoLmNvbmNsYXZlLmVudGl0aWVzLnYxLkFjY291bnRBc3NvY2lhdGlvbiJFChJBY2NvdW50QXNzb2NpYXRpb24SLwoKd2FsbF9jbG9jaxgBIAEoCzIbLmNvbmNsYXZlLmVudGl0aWVzLnYxLkxpbWl0QktaSWdpdGh1Yi5jb20vZGR5bWtvL2NvbmNsYXZlLWJhY2tlbmQvZ2VuL2dvL2NvbmNsYXZlL2VudGl0aWVzL3YxO2VudGl0aWVzdjFiBnByb3RvMw");
+
+/**
+ * Associations represents a collection of Slurm association objects.
+ *
+ * @generated from message conclave.entities.v1.Associations
+ */
+export type Associations = Message<"conclave.entities.v1.Associations"> & {
+  /**
+   * A list of Association objects.
+   *
+   * @generated from field: repeated conclave.entities.v1.Association associations = 1;
+   */
+  associations: Association[];
+};
+
+/**
+ * Describes the message conclave.entities.v1.Associations.
+ * Use `create(AssociationsSchema)` to create a new message.
+ */
+export const AssociationsSchema: GenMessage<Associations> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 0);
 
 /**
  * Association represents the relationship between an account, a cluster, a partition, and a user.
@@ -20,32 +41,123 @@ export const file_conclave_entities_v1_association: GenFile = /*@__PURE__*/
  */
 export type Association = Message<"conclave.entities.v1.Association"> & {
   /**
-   * The unique identifier for the account.
+   * Account is the account name associated with this association.
    *
    * @generated from field: string account = 1;
    */
   account: string;
 
   /**
-   * The identifier for the cluster where the account resides.
+   * Cluster is the cluster name associated with this association.
    *
    * @generated from field: string cluster = 2;
    */
   cluster: string;
 
   /**
-   * The partition within the cluster that the account belongs to.
+   * Partition is the partition name associated with this association.
    *
    * @generated from field: string partition = 3;
    */
   partition: string;
 
   /**
-   * The unique identifier for the user associated with the account.
+   * User is the user name associated with this association.
    *
    * @generated from field: string user = 4;
    */
   user: string;
+
+  /**
+   * Max contains the maximum allowed resource limits for the association.
+   *
+   * @generated from field: conclave.entities.v1.AssociationMax max = 5;
+   */
+  max?: AssociationMax;
+
+  /**
+   * SharesRaw represents the raw share value for the association.
+   *
+   * @generated from field: int32 shares_raw = 6;
+   */
+  sharesRaw: number;
+
+  /**
+   * ParentAccount is the parent account name for this association.
+   *
+   * @generated from field: string parent_account = 7;
+   */
+  parentAccount: string;
+
+  /**
+   * IsDefault indicates whether this association is the default one.
+   *
+   * @generated from field: bool is_default = 8;
+   */
+  isDefault: boolean;
+
+  /**
+   * Comment holds any additional commentary regarding the association.
+   *
+   * @generated from field: string comment = 9;
+   */
+  comment: string;
+
+  /**
+   * Priority represents the priority configuration as a limit.
+   *
+   * @generated from field: conclave.entities.v1.Limit priority = 10;
+   */
+  priority?: Limit;
+
+  /**
+   * QOS is a list of Quality of Service values associated with the association.
+   *
+   * @generated from field: repeated string qos = 11;
+   */
+  qos: string[];
+
+  /**
+   * Lineage indicates the lineage or origin of the association.
+   *
+   * @generated from field: string lineage = 12;
+   */
+  lineage: string;
+
+  /**
+   * Accounting is a list of accounting records associated with the association.
+   *
+   * @generated from field: repeated conclave.entities.v1.Accounting accounting = 13;
+   */
+  accounting: Accounting[];
+
+  /**
+   * Default contains default configuration values (e.g., default QOS).
+   *
+   * @generated from field: map<string, string> default = 14;
+   */
+  default: { [key: string]: string };
+
+  /**
+   * Flags is a list of flags (e.g., "DELETED") associated with the association.
+   *
+   * @generated from field: repeated string flags = 15;
+   */
+  flags: string[];
+
+  /**
+   * ID uniquely identifies the association.
+   *
+   * @generated from field: conclave.entities.v1.AssociationID id = 16;
+   */
+  id?: AssociationID;
+
+  /**
+   * Min contains minimum threshold configurations for the association.
+   *
+   * @generated from field: conclave.entities.v1.AssociationMin min = 17;
+   */
+  min?: AssociationMin;
 };
 
 /**
@@ -53,7 +165,7 @@ export type Association = Message<"conclave.entities.v1.Association"> & {
  * Use `create(AssociationSchema)` to create a new message.
  */
 export const AssociationSchema: GenMessage<Association> = /*@__PURE__*/
-  messageDesc(file_conclave_entities_v1_association, 0);
+  messageDesc(file_conclave_entities_v1_association, 1);
 
 /**
  * DefaultAssociation represents the default association details for a user.
@@ -81,5 +193,523 @@ export type DefaultAssociation = Message<"conclave.entities.v1.DefaultAssociatio
  * Use `create(DefaultAssociationSchema)` to create a new message.
  */
 export const DefaultAssociationSchema: GenMessage<DefaultAssociation> = /*@__PURE__*/
-  messageDesc(file_conclave_entities_v1_association, 1);
+  messageDesc(file_conclave_entities_v1_association, 2);
+
+/**
+ * AssociationID represents the identification details for an Association.
+ *
+ * @generated from message conclave.entities.v1.AssociationID
+ */
+export type AssociationID = Message<"conclave.entities.v1.AssociationID"> & {
+  /**
+   * Account is the account part of the identifier.
+   *
+   * @generated from field: string account = 1;
+   */
+  account: string;
+
+  /**
+   * Cluster is the cluster part of the identifier.
+   *
+   * @generated from field: string cluster = 2;
+   */
+  cluster: string;
+
+  /**
+   * Partition is the partition part of the identifier.
+   *
+   * @generated from field: string partition = 3;
+   */
+  partition: string;
+
+  /**
+   * User is the user part of the identifier.
+   *
+   * @generated from field: string user = 4;
+   */
+  user: string;
+
+  /**
+   * ID is the numeric identifier.
+   *
+   * @generated from field: int32 id = 5;
+   */
+  id: number;
+};
+
+/**
+ * Describes the message conclave.entities.v1.AssociationID.
+ * Use `create(AssociationIDSchema)` to create a new message.
+ */
+export const AssociationIDSchema: GenMessage<AssociationID> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 3);
+
+/**
+ * AssociationMin represents the minimum threshold settings for an Association.
+ *
+ * @generated from message conclave.entities.v1.AssociationMin
+ */
+export type AssociationMin = Message<"conclave.entities.v1.AssociationMin"> & {
+  /**
+   * PriorityThreshold represents the minimum priority threshold as a limit.
+   *
+   * @generated from field: conclave.entities.v1.Limit priority_threshold = 1;
+   */
+  priorityThreshold?: Limit;
+};
+
+/**
+ * Describes the message conclave.entities.v1.AssociationMin.
+ * Use `create(AssociationMinSchema)` to create a new message.
+ */
+export const AssociationMinSchema: GenMessage<AssociationMin> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 4);
+
+/**
+ * Limit represents resource limits or priority configurations.
+ *
+ * @generated from message conclave.entities.v1.Limit
+ */
+export type Limit = Message<"conclave.entities.v1.Limit"> & {
+  /**
+   * Set indicates whether the limit is explicitly set.
+   *
+   * @generated from field: bool set = 1;
+   */
+  set: boolean;
+
+  /**
+   * Infinite represents the value for an unlimited configuration.
+   *
+   * @generated from field: bool infinite = 2;
+   */
+  infinite: boolean;
+
+  /**
+   * Number is the numerical limit value.
+   *
+   * @generated from field: int32 number = 3;
+   */
+  number: number;
+};
+
+/**
+ * Describes the message conclave.entities.v1.Limit.
+ * Use `create(LimitSchema)` to create a new message.
+ */
+export const LimitSchema: GenMessage<Limit> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 5);
+
+/**
+ * Accounting represents accounting details for a Slurm association.
+ *
+ * @generated from message conclave.entities.v1.Accounting
+ */
+export type Accounting = Message<"conclave.entities.v1.Accounting"> & {
+  /**
+   * Allocated represents the allocated resources (e.g., seconds).
+   *
+   * @generated from field: conclave.entities.v1.Allocated allocated = 1;
+   */
+  allocated?: Allocated;
+
+  /**
+   * ID is the identifier for the accounting record.
+   *
+   * @generated from field: int32 id = 2;
+   */
+  id: number;
+
+  /**
+   * Start is the start time for the accounting record.
+   *
+   * @generated from field: int32 start = 3;
+   */
+  start: number;
+
+  /**
+   * TRES represents trackable resource details.
+   *
+   * @generated from field: conclave.entities.v1.TresEntry tres = 4;
+   */
+  tres?: TresEntry;
+};
+
+/**
+ * Describes the message conclave.entities.v1.Accounting.
+ * Use `create(AccountingSchema)` to create a new message.
+ */
+export const AccountingSchema: GenMessage<Accounting> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 6);
+
+/**
+ * Allocated represents allocated resource details.
+ *
+ * @generated from message conclave.entities.v1.Allocated
+ */
+export type Allocated = Message<"conclave.entities.v1.Allocated"> & {
+  /**
+   * Seconds indicates the number of allocated seconds.
+   *
+   * @generated from field: int32 seconds = 1;
+   */
+  seconds: number;
+};
+
+/**
+ * Describes the message conclave.entities.v1.Allocated.
+ * Use `create(AllocatedSchema)` to create a new message.
+ */
+export const AllocatedSchema: GenMessage<Allocated> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 7);
+
+/**
+ * AssociationMax represents the maximum resource limits for a Slurm association.
+ *
+ * @generated from message conclave.entities.v1.AssociationMax
+ */
+export type AssociationMax = Message<"conclave.entities.v1.AssociationMax"> & {
+  /**
+   * Jobs contains job-related maximum limits.
+   *
+   * @generated from field: conclave.entities.v1.Jobs jobs = 1;
+   */
+  jobs?: Jobs;
+
+  /**
+   * Tres contains TRES-related maximum limits.
+   *
+   * @generated from field: conclave.entities.v1.Tres tres = 2;
+   */
+  tres?: Tres;
+
+  /**
+   * Per contains per-account resource limits.
+   *
+   * @generated from field: conclave.entities.v1.MaxPer per = 3;
+   */
+  per?: MaxPer;
+};
+
+/**
+ * Describes the message conclave.entities.v1.AssociationMax.
+ * Use `create(AssociationMaxSchema)` to create a new message.
+ */
+export const AssociationMaxSchema: GenMessage<AssociationMax> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 8);
+
+/**
+ * Jobs represents job-related resource limits.
+ *
+ * @generated from message conclave.entities.v1.Jobs
+ */
+export type Jobs = Message<"conclave.entities.v1.Jobs"> & {
+  /**
+   * Per contains per-job limits for various job metrics.
+   *
+   * @generated from field: conclave.entities.v1.JobsPer per = 1;
+   */
+  per?: JobsPer;
+
+  /**
+   * Active represents the limit on active jobs.
+   *
+   * @generated from field: conclave.entities.v1.Limit active = 2;
+   */
+  active?: Limit;
+
+  /**
+   * Accruing represents the limit on accruing jobs.
+   *
+   * @generated from field: conclave.entities.v1.Limit accruing = 3;
+   */
+  accruing?: Limit;
+
+  /**
+   * Total represents the overall limit on jobs.
+   *
+   * @generated from field: conclave.entities.v1.Limit total = 4;
+   */
+  total?: Limit;
+};
+
+/**
+ * Describes the message conclave.entities.v1.Jobs.
+ * Use `create(JobsSchema)` to create a new message.
+ */
+export const JobsSchema: GenMessage<Jobs> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 9);
+
+/**
+ * JobsPer represents per-job limits for specific job metrics.
+ *
+ * @generated from message conclave.entities.v1.JobsPer
+ */
+export type JobsPer = Message<"conclave.entities.v1.JobsPer"> & {
+  /**
+   * Count represents the limit on the number of jobs.
+   *
+   * @generated from field: conclave.entities.v1.Limit count = 1;
+   */
+  count?: Limit;
+
+  /**
+   * Accruing represents the limit on accruing jobs per job.
+   *
+   * @generated from field: conclave.entities.v1.Limit accruing = 2;
+   */
+  accruing?: Limit;
+
+  /**
+   * Submitted represents the limit on submitted jobs per job.
+   *
+   * @generated from field: conclave.entities.v1.Limit submitted = 3;
+   */
+  submitted?: Limit;
+
+  /**
+   * WallClock represents the wall clock time limit per job.
+   *
+   * @generated from field: conclave.entities.v1.Limit wall_clock = 4;
+   */
+  wallClock?: Limit;
+};
+
+/**
+ * Describes the message conclave.entities.v1.JobsPer.
+ * Use `create(JobsPerSchema)` to create a new message.
+ */
+export const JobsPerSchema: GenMessage<JobsPer> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 10);
+
+/**
+ * Tres represents TRES (Trackable RESources) related resource limits.
+ *
+ * @generated from message conclave.entities.v1.Tres
+ */
+export type Tres = Message<"conclave.entities.v1.Tres"> & {
+  /**
+   * Total is a list of TRES entries representing total limits.
+   *
+   * @generated from field: repeated conclave.entities.v1.TresEntry total = 1;
+   */
+  total: TresEntry[];
+
+  /**
+   * Group represents grouped TRES limits.
+   *
+   * @generated from field: conclave.entities.v1.TresGroup group = 2;
+   */
+  group?: TresGroup;
+
+  /**
+   * Minutes represents TRES limits measured in minutes.
+   *
+   * @generated from field: conclave.entities.v1.TresMinutes minutes = 3;
+   */
+  minutes?: TresMinutes;
+
+  /**
+   * Per contains per-job and per-node TRES limits.
+   *
+   * @generated from field: conclave.entities.v1.TresPer per = 4;
+   */
+  per?: TresPer;
+};
+
+/**
+ * Describes the message conclave.entities.v1.Tres.
+ * Use `create(TresSchema)` to create a new message.
+ */
+export const TresSchema: GenMessage<Tres> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 11);
+
+/**
+ * TresEntry represents a single TRES entry.
+ *
+ * @generated from message conclave.entities.v1.TresEntry
+ */
+export type TresEntry = Message<"conclave.entities.v1.TresEntry"> & {
+  /**
+   * Type specifies the type of TRES.
+   *
+   * @generated from field: string type = 1;
+   */
+  type: string;
+
+  /**
+   * Name is the name of the TRES.
+   *
+   * @generated from field: string name = 2;
+   */
+  name: string;
+
+  /**
+   * Id is the numeric identifier for the TRES.
+   *
+   * @generated from field: int32 id = 3;
+   */
+  id: number;
+
+  /**
+   * Count is the count or limit value for the TRES.
+   *
+   * @generated from field: int32 count = 4;
+   */
+  count: number;
+};
+
+/**
+ * Describes the message conclave.entities.v1.TresEntry.
+ * Use `create(TresEntrySchema)` to create a new message.
+ */
+export const TresEntrySchema: GenMessage<TresEntry> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 12);
+
+/**
+ * TresGroup represents grouped TRES entries.
+ *
+ * @generated from message conclave.entities.v1.TresGroup
+ */
+export type TresGroup = Message<"conclave.entities.v1.TresGroup"> & {
+  /**
+   * Minutes is a list of TRES entries grouped by minutes.
+   *
+   * @generated from field: repeated conclave.entities.v1.TresEntry minutes = 1;
+   */
+  minutes: TresEntry[];
+
+  /**
+   * Active is a list of active TRES entries.
+   *
+   * @generated from field: repeated conclave.entities.v1.TresEntry active = 2;
+   */
+  active: TresEntry[];
+};
+
+/**
+ * Describes the message conclave.entities.v1.TresGroup.
+ * Use `create(TresGroupSchema)` to create a new message.
+ */
+export const TresGroupSchema: GenMessage<TresGroup> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 13);
+
+/**
+ * TresMinutes represents TRES limits that are measured in minutes.
+ *
+ * @generated from message conclave.entities.v1.TresMinutes
+ */
+export type TresMinutes = Message<"conclave.entities.v1.TresMinutes"> & {
+  /**
+   * Total is a list of TRES entries representing total minute limits.
+   *
+   * @generated from field: repeated conclave.entities.v1.TresEntry total = 1;
+   */
+  total: TresEntry[];
+
+  /**
+   * Per contains per-job minute limits for TRES.
+   *
+   * @generated from field: conclave.entities.v1.TresMinutesPer per = 2;
+   */
+  per?: TresMinutesPer;
+};
+
+/**
+ * Describes the message conclave.entities.v1.TresMinutes.
+ * Use `create(TresMinutesSchema)` to create a new message.
+ */
+export const TresMinutesSchema: GenMessage<TresMinutes> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 14);
+
+/**
+ * TresMinutesPer represents per-job TRES minute limits.
+ *
+ * @generated from message conclave.entities.v1.TresMinutesPer
+ */
+export type TresMinutesPer = Message<"conclave.entities.v1.TresMinutesPer"> & {
+  /**
+   * Job is a list of TRES entries representing per-job limits in minutes.
+   *
+   * @generated from field: repeated conclave.entities.v1.TresEntry job = 1;
+   */
+  job: TresEntry[];
+};
+
+/**
+ * Describes the message conclave.entities.v1.TresMinutesPer.
+ * Use `create(TresMinutesPerSchema)` to create a new message.
+ */
+export const TresMinutesPerSchema: GenMessage<TresMinutesPer> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 15);
+
+/**
+ * TresPer represents per-job and per-node TRES limits.
+ *
+ * @generated from message conclave.entities.v1.TresPer
+ */
+export type TresPer = Message<"conclave.entities.v1.TresPer"> & {
+  /**
+   * Job is a list of TRES entries representing per-job TRES limits.
+   *
+   * @generated from field: repeated conclave.entities.v1.TresEntry job = 1;
+   */
+  job: TresEntry[];
+
+  /**
+   * Node is a list of TRES entries representing per-node TRES limits.
+   *
+   * @generated from field: repeated conclave.entities.v1.TresEntry node = 2;
+   */
+  node: TresEntry[];
+};
+
+/**
+ * Describes the message conclave.entities.v1.TresPer.
+ * Use `create(TresPerSchema)` to create a new message.
+ */
+export const TresPerSchema: GenMessage<TresPer> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 16);
+
+/**
+ * MaxPer represents resource limits on a per-account basis.
+ *
+ * @generated from message conclave.entities.v1.MaxPer
+ */
+export type MaxPer = Message<"conclave.entities.v1.MaxPer"> & {
+  /**
+   * Account contains account-specific resource limits.
+   *
+   * @generated from field: conclave.entities.v1.AccountAssociation account = 1;
+   */
+  account?: AccountAssociation;
+};
+
+/**
+ * Describes the message conclave.entities.v1.MaxPer.
+ * Use `create(MaxPerSchema)` to create a new message.
+ */
+export const MaxPerSchema: GenMessage<MaxPer> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 17);
+
+/**
+ * AccountAssociation represents account-specific resource limits.
+ *
+ * @generated from message conclave.entities.v1.AccountAssociation
+ */
+export type AccountAssociation = Message<"conclave.entities.v1.AccountAssociation"> & {
+  /**
+   * WallClock represents the wall clock time limit for the account.
+   *
+   * @generated from field: conclave.entities.v1.Limit wall_clock = 1;
+   */
+  wallClock?: Limit;
+};
+
+/**
+ * Describes the message conclave.entities.v1.AccountAssociation.
+ * Use `create(AccountAssociationSchema)` to create a new message.
+ */
+export const AccountAssociationSchema: GenMessage<AccountAssociation> = /*@__PURE__*/
+  messageDesc(file_conclave_entities_v1_association, 18);
 
