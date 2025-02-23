@@ -24,6 +24,7 @@
     $: grafanaSrc1 = getGrafanaUrl(77, fromTime);
     $: grafanaSrc2 = getGrafanaUrl(78, fromTime);
     $: grafanaSrc3 = getGrafanaUrl(74, fromTime);
+    $: grafanaSrc4 = getGrafanaUrl(324, fromTime);
 
     // Function to generate Grafana URLs dynamically and force refresh
     function getGrafanaUrl(panelId, time) {
@@ -162,6 +163,13 @@
         <div class="overflow-hidden rounded-lg bg-white shadow-sm flex flex-col">
             <div class="px-4 py-5 sm:p-6 flex-grow">
                 <iframe src={grafanaSrc3} class="w-full h-[600px] rounded-lg border border-gray-200" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 p-6">
+        <div class="overflow-hidden rounded-lg bg-white shadow-sm flex flex-col">
+            <div class="px-4 py-5 sm:p-6 flex-grow">
+                <iframe src={grafanaSrc4} class="w-full h-[600px] rounded-lg border border-gray-200" frameborder="0"></iframe>
             </div>
         </div>
     </div>
