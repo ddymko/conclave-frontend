@@ -19,10 +19,6 @@
     // Convert object into an array for iteration
     const statuses = Object.entries(componentData.componentStatuses);
 
-    // Helper functions to check status text
-    function isFailed(status) {
-        return status.toLowerCase().includes("failed");
-    }
     function isActive(status) {
         return status.toLowerCase().includes("active (running)");
     }

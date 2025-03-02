@@ -27,9 +27,10 @@
     $: grafanaSrc4 = getGrafanaUrl(324, fromTime);
     $: grafanaSrc5 = getGrafanaUrl(229, fromTime);
 
+    console.log(node.address)
     // Function to generate Grafana URLs dynamically and force refresh
     function getGrafanaUrl(panelId, time) {
-        return `http://192.168.4.194:3000/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=${panelId}&from=${time}&to=${toTime}&refresh=1m&theme=light&width=800&height=600&var-host=${node.address}&_=${Date.now()}`;
+        return `http://192.168.4.194:3000/d-solo/rYdddlPWk/node-exporter-full?orgId=1&panelId=${panelId}&from=${time}&to=${toTime}&refresh=1m&theme=light&width=800&height=600&var-node=${node.address}:9100&var-job=node&_=${Date.now()}`;
     }
 </script>
 
