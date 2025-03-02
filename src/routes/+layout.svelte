@@ -119,18 +119,26 @@
                         <ul class="ml-4 mt-1 space-y-1">
                             <li>
                                 <a
-                                        href="/cluster/realtime"
+                                        href="/cluster/nodes"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
-                                    Real-Time Cluster Status
+                                    Node Management
                                 </a>
                             </li>
                             <li>
                                 <a
-                                        href="/cluster/health"
+                                        href="/cluster/qos"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
-                                    Health &amp; Alerting
+                                    QOS Summary
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                        href="/cluster/tres"
+                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+                                >
+                                    TRES Summary
                                 </a>
                             </li>
                             <li>
@@ -138,7 +146,15 @@
                                         href="/cluster/partitions"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
-                                    Partition / Queue Summary
+                                    Partition Summary
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                        href="/cluster/components"
+                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+                                >
+                                    Components
                                 </a>
                             </li>
                         </ul>
@@ -284,14 +300,6 @@
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
                                     Fairshare &amp; Accounting
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        href="/admin/nodes"
-                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
-                                >
-                                    Node Management
                                 </a>
                             </li>
                             <li>

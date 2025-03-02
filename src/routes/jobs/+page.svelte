@@ -60,6 +60,8 @@
                                 <td class="border-b border-gray-200 py-4 pr-3 pl-4 text-sm font-medium whitespace-nowrap text-gray-900 sm:pl-6 lg:pl-8">{job.id}</td>
                                 <td class="hidden border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-500 sm:table-cell">{job.name}</td>
                                 <td class="hidden border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-500 lg:table-cell">{convertJobState(job.state)}</td>
+<!--                                <td class="hidden border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-500 sm:table-cell">{job.account}</td>-->
+<!--                                <td class="hidden border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-500 lg:table-cell">{job.grou}</td>-->
                                 <td class="relative border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-8 lg:pr-8">
                                     <a href="/jobs/{job.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
                                 </td>

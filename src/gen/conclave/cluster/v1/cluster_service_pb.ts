@@ -2,18 +2,53 @@
 // @generated from file conclave/cluster/v1/cluster_service.proto (package conclave.cluster.v1, syntax proto3)
 /* eslint-disable */
 
-import type { GenFile, GenService } from "@bufbuild/protobuf/codegenv1";
-import { fileDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
+import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
+import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
 import type { GetTresRequestSchema } from "./get_tres_request_pb";
 import { file_conclave_cluster_v1_get_tres_request } from "./get_tres_request_pb";
 import type { GetTresResponseSchema } from "./get_tres_response_pb";
 import { file_conclave_cluster_v1_get_tres_response } from "./get_tres_response_pb";
+import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file conclave/cluster/v1/cluster_service.proto.
  */
 export const file_conclave_cluster_v1_cluster_service: GenFile = /*@__PURE__*/
-  fileDesc("Ciljb25jbGF2ZS9jbHVzdGVyL3YxL2NsdXN0ZXJfc2VydmljZS5wcm90bxITY29uY2xhdmUuY2x1c3Rlci52MTJmCg5DbHVzdGVyU2VydmljZRJUCgdHZXRUcmVzEiMuY29uY2xhdmUuY2x1c3Rlci52MS5HZXRUcmVzUmVxdWVzdBokLmNvbmNsYXZlLmNsdXN0ZXIudjEuR2V0VHJlc1Jlc3BvbnNlQklaR2dpdGh1Yi5jb20vZGR5bWtvL2NvbmNsYXZlLWJhY2tlbmQvZ2VuL2dvL2NvbmNsYXZlL2NsdXN0ZXIvdjE7Y2x1c3RlcnYxYgZwcm90bzM", [file_conclave_cluster_v1_get_tres_request, file_conclave_cluster_v1_get_tres_response]);
+  fileDesc("Ciljb25jbGF2ZS9jbHVzdGVyL3YxL2NsdXN0ZXJfc2VydmljZS5wcm90bxITY29uY2xhdmUuY2x1c3Rlci52MSIbChlHZXRDb21wb25lbnRTdGF0dXNSZXF1ZXN0IroBChpHZXRDb21wb25lbnRTdGF0dXNSZXNwb25zZRJiChJjb21wb25lbnRfc3RhdHVzZXMYASADKAsyRi5jb25jbGF2ZS5jbHVzdGVyLnYxLkdldENvbXBvbmVudFN0YXR1c1Jlc3BvbnNlLkNvbXBvbmVudFN0YXR1c2VzRW50cnkaOAoWQ29tcG9uZW50U3RhdHVzZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBMt0BCg5DbHVzdGVyU2VydmljZRJUCgdHZXRUcmVzEiMuY29uY2xhdmUuY2x1c3Rlci52MS5HZXRUcmVzUmVxdWVzdBokLmNvbmNsYXZlLmNsdXN0ZXIudjEuR2V0VHJlc1Jlc3BvbnNlEnUKEkdldENvbXBvbmVudFN0YXR1cxIuLmNvbmNsYXZlLmNsdXN0ZXIudjEuR2V0Q29tcG9uZW50U3RhdHVzUmVxdWVzdBovLmNvbmNsYXZlLmNsdXN0ZXIudjEuR2V0Q29tcG9uZW50U3RhdHVzUmVzcG9uc2VCSVpHZ2l0aHViLmNvbS9kZHlta28vY29uY2xhdmUtYmFja2VuZC9nZW4vZ28vY29uY2xhdmUvY2x1c3Rlci92MTtjbHVzdGVydjFiBnByb3RvMw", [file_conclave_cluster_v1_get_tres_request, file_conclave_cluster_v1_get_tres_response]);
+
+/**
+ * The request message containing an optional list of component names.
+ *
+ * @generated from message conclave.cluster.v1.GetComponentStatusRequest
+ */
+export type GetComponentStatusRequest = Message<"conclave.cluster.v1.GetComponentStatusRequest"> & {
+};
+
+/**
+ * Describes the message conclave.cluster.v1.GetComponentStatusRequest.
+ * Use `create(GetComponentStatusRequestSchema)` to create a new message.
+ */
+export const GetComponentStatusRequestSchema: GenMessage<GetComponentStatusRequest> = /*@__PURE__*/
+  messageDesc(file_conclave_cluster_v1_cluster_service, 0);
+
+/**
+ * The response message containing a map of component names to their active status.
+ *
+ * @generated from message conclave.cluster.v1.GetComponentStatusResponse
+ */
+export type GetComponentStatusResponse = Message<"conclave.cluster.v1.GetComponentStatusResponse"> & {
+  /**
+   * @generated from field: map<string, string> component_statuses = 1;
+   */
+  componentStatuses: { [key: string]: string };
+};
+
+/**
+ * Describes the message conclave.cluster.v1.GetComponentStatusResponse.
+ * Use `create(GetComponentStatusResponseSchema)` to create a new message.
+ */
+export const GetComponentStatusResponseSchema: GenMessage<GetComponentStatusResponse> = /*@__PURE__*/
+  messageDesc(file_conclave_cluster_v1_cluster_service, 1);
 
 /**
  * ClusterService provides RPC methods to interact with cluster resources.
@@ -31,6 +66,14 @@ export const ClusterService: GenService<{
     methodKind: "unary";
     input: typeof GetTresRequestSchema;
     output: typeof GetTresResponseSchema;
+  },
+  /**
+   * @generated from rpc conclave.cluster.v1.ClusterService.GetComponentStatus
+   */
+  getComponentStatus: {
+    methodKind: "unary";
+    input: typeof GetComponentStatusRequestSchema;
+    output: typeof GetComponentStatusResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_conclave_cluster_v1_cluster_service, 0);
