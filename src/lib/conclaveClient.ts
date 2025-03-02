@@ -10,7 +10,8 @@ import {PartitionsService} from "../gen/conclave/partitions/v1/partitions_servic
 import {QosService} from "../gen/conclave/qos/v1/qos_service_pb";
 
 const transport = createConnectTransport({
-    baseUrl: "http://localhost:8080"
+    // baseUrl: "http://localhost:8080"
+    baseUrl: "http://192.168.4.194:1212/"
 });
 
 export const mySystemService = createClient(SystemService, transport)

@@ -127,14 +127,6 @@
                             </li>
                             <li>
                                 <a
-                                        href="/cluster/realtime"
-                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
-                                >
-                                    Real-Time Cluster Status
-                                </a>
-                            </li>
-                            <li>
-                                <a
                                         href="/cluster/qos"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
@@ -155,6 +147,14 @@
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
                                     Partition Summary
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                        href="/cluster/components"
+                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+                                >
+                                    Components
                                 </a>
                             </li>
                         </ul>

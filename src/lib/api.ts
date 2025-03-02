@@ -45,6 +45,8 @@ import {type GetQossRequest} from "../gen/conclave/qos/v1/get_qoss_request_pb";
 import {type GetQossResponse} from "../gen/conclave/qos/v1/get_qoss_response_pb";
 import {type GetQosRequest} from "../gen/conclave/qos/v1/get_qos_request_pb";
 import {type GetQosResponse} from "../gen/conclave/qos/v1/get_qos_response_pb";
+import {type GetComponentStatusRequest} from "../gen/conclave/cluster/v1/cluster_service_pb";
+import {type GetComponentStatusResponse} from "../gen/conclave/cluster/v1/cluster_service_pb";
 
 import { ConnectError, Code } from '@connectrpc/connect';
 
@@ -347,6 +349,20 @@ export async function fetchQos(name: string): Promise<GetQosResponse> {
 	} catch (err) {
 		if (err instanceof ConnectError && err.code === Code.AlreadyExists) {
 			console.warn(`ps issue.`, err);
+		} else {
+			console.error(`ps issue 2':`, err);
+		}
+		throw err;
+	}
+}
+
+export async function fetchComponentStatus(): Promise<GetComponentStatusResponse> {
+	try {
+		const request: GetComponentStatusRequest = {$typeName: "conclave.cluster.v1.GetComponentStatusRequest"};
+		return await myClusterService.getComponentStatus(request);
+	} catch (err) {
+		if (err instanceof ConnectError && err.code === Code.AlreadyExists) {
+			console.warn(`qos issue.`, err);
 		} else {
 			console.error(`ps issue 2':`, err);
 		}
