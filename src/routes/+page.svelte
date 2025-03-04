@@ -6,7 +6,6 @@
     const {tresData, jobsData} = data;
 
 
-
     function convertMbToGb(mb: bigint): string {
         return (Number(mb) / 1024).toFixed(2);
     }
@@ -68,7 +67,7 @@
                      fill="currentColor" aria-hidden="true">
                     <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z"/>
                 </svg>
-                <!--                <a href="/jobs" class="ml-4 text-sm font-medium text-gray-600 hover:text-gray-700">Job Dashboard</a>-->
+                <a href="/" class="ml-4 text-sm font-medium text-gray-600 hover:text-gray-700">Cluster Overview</a>
             </div>
         </li>
     </ol>
@@ -85,7 +84,7 @@
             <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ tresData.cpu.count}</dd>
         </div>
         <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow-sm sm:p-6">
-            <dt class="truncate text-sm font-medium text-gray-500">Total Memory (GB) </dt>
+            <dt class="truncate text-sm font-medium text-gray-500">Total Memory (GB)</dt>
             <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ convertMbToGb(tresData.mem.count)}</dd>
         </div>
 
@@ -109,15 +108,15 @@
         </div>
         <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow-sm sm:p-6">
             <dt class="truncate text-sm font-medium text-gray-500">Jobs Timed out</dt>
-            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ stateCount.get("Timeout")?? 0}</dd>
+            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ stateCount.get("Timeout") ?? 0}</dd>
         </div>
         <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow-sm sm:p-6">
             <dt class="truncate text-sm font-medium text-gray-500">Jobs Pending</dt>
-            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ stateCount.get("Pending")?? 0}</dd>
+            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ stateCount.get("Pending") ?? 0}</dd>
         </div>
         <div class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow-sm sm:p-6">
             <dt class="truncate text-sm font-medium text-gray-500">Jobs Running</dt>
-            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ stateCount.get("Running")?? 0}</dd>
+            <dd class="mt-1 text-3xl font-semibold tracking-tight text-gray-900">{ stateCount.get("Running") ?? 0}</dd>
         </div>
     </dl>
 </div>
@@ -127,11 +126,12 @@
         Metric Time Range
         <div class="flex flex-wrap gap-2 p-6">
             {#each [
-                { label: "5 mins", value: 5 }, { label: "15 mins", value: 15 }, { label: "30 mins", value: 30 },
-                { label: "1 hour", value: 60 }, { label: "6 hours", value: 360 }, { label: "12 hours", value: 720 },
-                { label: "24 hours", value: 1440 }, { label: "1 week", value: 10080 }
+                {label: "5 mins", value: 5}, {label: "15 mins", value: 15}, {label: "30 mins", value: 30},
+                {label: "1 hour", value: 60}, {label: "6 hours", value: 360}, {label: "12 hours", value: 720},
+                {label: "24 hours", value: 1440}, {label: "1 week", value: 10080}
             ] as time}
-                <button on:click={() => setTimeRange(time.value)} class="rounded-sm bg-indigo-600 px-2 py-1 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                <button on:click={() => setTimeRange(time.value)}
+                        class="rounded-sm bg-indigo-600 px-2 py-1 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                     {time.label}
                 </button>
             {/each}
@@ -140,12 +140,14 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
             <div class="overflow-hidden rounded-lg bg-white shadow-sm flex flex-col">
                 <div class="px-4 py-5 sm:p-6 flex-grow">
-                    <iframe src={grafanaSrc1} class="w-full h-[600px] rounded-lg border border-gray-200" frameborder="0"></iframe>
+                    <iframe src={grafanaSrc1} class="w-full h-[600px] rounded-lg border border-gray-200"
+                            frameborder="0"></iframe>
                 </div>
             </div>
             <div class="overflow-hidden rounded-lg bg-white shadow-sm flex flex-col">
                 <div class="px-4 py-5 sm:p-6 flex-grow">
-                    <iframe src={grafanaSrc2} class="w-full h-[600px] rounded-lg border border-gray-200" frameborder="0"></iframe>
+                    <iframe src={grafanaSrc2} class="w-full h-[600px] rounded-lg border border-gray-200"
+                            frameborder="0"></iframe>
                 </div>
             </div>
         </div>
@@ -153,19 +155,22 @@
     <div class="grid grid-cols-2 md:grid-cols-2 gap-6 p-6">
         <div class="overflow-hidden rounded-lg bg-white shadow-sm flex flex-col">
             <div class="px-4 py-5 sm:p-6 flex-grow">
-                <iframe src={clusterNetwork} class="w-full h-[600px] rounded-lg border border-gray-200" frameborder="0"></iframe>
+                <iframe src={clusterNetwork} class="w-full h-[600px] rounded-lg border border-gray-200"
+                        frameborder="0"></iframe>
             </div>
         </div>
         <div class="overflow-hidden rounded-lg bg-white shadow-sm flex flex-col">
             <div class="px-4 py-5 sm:p-6 flex-grow">
-                <iframe src={clusterDisk} class="w-full h-[600px] rounded-lg border border-gray-200" frameborder="0"></iframe>
+                <iframe src={clusterDisk} class="w-full h-[600px] rounded-lg border border-gray-200"
+                        frameborder="0"></iframe>
             </div>
         </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-1 gap-6 p-6">
         <div class="overflow-hidden rounded-lg bg-white shadow-sm flex flex-col">
             <div class="px-4 py-5 sm:p-6 flex-grow">
-                <iframe src={cpuheatmaps} class="w-full h-[600px] rounded-lg border border-gray-200" frameborder="0"></iframe>
+                <iframe src={cpuheatmaps} class="w-full h-[600px] rounded-lg border border-gray-200"
+                        frameborder="0"></iframe>
             </div>
         </div>
     </div>

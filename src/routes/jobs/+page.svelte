@@ -41,7 +41,7 @@
         <div class="mt-8 flow-root">
             <div class="-mx-4 -my-2 sm:-mx-6 lg:-mx-8">
                 <div class="inline-block min-w-full py-2 align-middle">
-                    <table class="min-w-full border-separate border-spacing-0">
+                    <table class="min-w-full border-separate border-spacing-0 bg-white">
                         <thead>
                         <tr>
                             <th scope="col" class="sticky top-0 z-10 border-b border-gray-300 bg-white/75 py-3.5 pr-3 pl-4 text-left text-sm font-semibold text-gray-900 backdrop-blur-sm backdrop-filter sm:pl-6 lg:pl-8">ID</th>

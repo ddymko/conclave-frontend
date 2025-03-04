@@ -7,7 +7,28 @@
     // Convert the object to an array for iteration.
     let tresArray = Object.values(tresData).filter(item => item && item.type);
 </script>
-
+<nav class="flex border-b border-gray-200 bg-white" aria-label="Breadcrumb">
+    <ol role="list" class="mx-auto flex w-full max-w-(--breakpoint-xl) space-x-4 px-4 sm:px-6 lg:px-8">
+        <li class="flex">
+            <div class="flex items-center">
+                <a href="/" class="text-gray-400 hover:text-gray-500">
+                    <svg class="size-5 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                        <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only">Home</span>
+                </a>
+            </div>
+        </li>
+        <li class="flex">
+            <div class="flex items-center">
+                <svg class="h-full w-6 shrink-0 text-gray-200" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" aria-hidden="true">
+                    <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+                </svg>
+                <a href="/tres" class="ml-4 text-sm font-medium text-gray-600 hover:text-gray-700">Tres Overview</a>
+            </div>
+        </li>
+    </ol>
+</nav>
 <div class="min-h-screen bg-gray-100 py-8 px-4">
     <div class="max-w-6xl mx-auto">
         <h1 class="text-3xl font-bold align-left mb-8">TRES Summary</h1>

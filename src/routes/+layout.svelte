@@ -119,6 +119,14 @@
                         <ul class="ml-4 mt-1 space-y-1">
                             <li>
                                 <a
+                                        href="/"
+                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+                                >
+                                    Cluster
+                                </a>
+                            </li>
+                            <li>
+                                <a
                                         href="/cluster/nodes"
                                         class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
                                 >
