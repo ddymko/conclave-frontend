@@ -37,10 +37,10 @@
             <p class="mt-2 text-sm text-gray-700">All reigstered nodes in cluster</p>
         </div>
         <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-            <button type="button"
-                    class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                Add Node
-            </button>
+<!--            <button type="button"-->
+<!--                    class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">-->
+<!--                Add Node-->
+<!--            </button>-->
         </div>
     </div>
     <div class="mt-8 flow-root">
@@ -75,7 +75,7 @@
                                 <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{ node.realMemory}MB</td>
                                 <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">{ node.state.toString()}</td>
                                 <td class="relative border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-8 lg:pr-8">
-                                    <a href="/cluster/nodes/{node.name}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                    <a href="/cluster/nodes/{node.name}" class="text-indigo-600 hover:text-indigo-900">View</a>
                                 </td>
                             </tr>
 

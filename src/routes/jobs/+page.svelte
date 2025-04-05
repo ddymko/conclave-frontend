@@ -34,9 +34,9 @@
                 <h1 class="text-base font-semibold text-gray-900">Jobs</h1>
                 <p class="mt-2 text-sm text-gray-700">List of all jobs that slurm has account for.</p>
             </div>
-            <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-                <button type="button" class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Start Job</button>
-            </div>
+<!--            <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">-->
+<!--                <button type="button" class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Start Job</button>-->
+<!--            </div>-->
         </div>
         <div class="mt-8 flow-root">
             <div class="-mx-4 -my-2 sm:-mx-6 lg:-mx-8">
@@ -63,7 +63,7 @@
 <!--                                <td class="hidden border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-500 sm:table-cell">{job.account}</td>-->
 <!--                                <td class="hidden border-b border-gray-200 px-3 py-4 text-sm whitespace-nowrap text-gray-500 lg:table-cell">{job.grou}</td>-->
                                 <td class="relative border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-8 lg:pr-8">
-                                    <a href="/jobs/{job.id}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                    <a href="/jobs/{job.id}" class="text-indigo-600 hover:text-indigo-900">View</a>
                                 </td>
                             </tr>
                         {/each}

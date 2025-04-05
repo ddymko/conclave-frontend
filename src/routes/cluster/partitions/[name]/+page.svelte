@@ -3,6 +3,30 @@
     const {partitionData} = data;
     let partition = partitionData.partitions[0];
     console.log(partition)
+
+    let expandedConfigured: string[] = [];
+    partition.nodes.configured.split(",").forEach(part => {
+        expandedConfigured = expandedConfigured.concat(expandRange(part.trim()));
+    });
+
+    function expandRange(rangeStr: string): string[] {
+        const rangeRegex = /(.*)\[(\d+)-(\d+)\]/;
+        const match = rangeStr.match(rangeRegex);
+        if (match) {
+            const prefix = match[1];
+            const start = parseInt(match[2], 10);
+            const end = parseInt(match[3], 10);
+            const results = [];
+            for (let i = start; i <= end; i++) {
+                // Preserve the number format (e.g., '02')
+                const num = i.toString().padStart(match[2].length, '0');
+                results.push(prefix + num);
+            }
+            return results;
+        }
+        return [rangeStr];
+    }
+
 </script>
 
 
@@ -68,7 +92,14 @@
                 </div>
                 <div class="px-4 py-5 sm:p-6">
                     <p><strong>Allowed Allocation:</strong> {partition.nodes.allowedAllocation}</p>
-                    <p><strong>Configured:</strong> {partition.nodes.configured}</p>
+                    <p>
+                        <strong>Configured:</strong>
+                        {#each expandedConfigured as config, index}
+                            <a href={`/cluster/nodes/${config}`} class="font-bold text-indigo-600 underline hover:text-indigo-800">
+                                {config}
+                            </a>{index < expandedConfigured.length - 1 ? ', ' : ''}
+                        {/each}
+                    </p>
                     <p><strong>Total Nodes:</strong> {partition.nodes.total}</p>
                 </div>
             </div>

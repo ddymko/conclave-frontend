@@ -127,7 +127,17 @@
                 <div class="px-4 py-5 sm:p-6">
                     <ul class="list-disc list-inside">
                         {#each card.items as [label, value]}
-                            <li><strong>{label}:</strong> {value}</li>
+                            {#if label === "Partitions"}
+                                <li>
+                                    <strong>{label}:</strong>
+                                    <a class="font-bold text-indigo-600 underline hover:text-indigo-800 px-2 py-1 bg-indigo-100 rounded" href={`/cluster/partitions/${value}`}>
+                                        {value}
+                                    </a>
+
+                                </li>
+                            {:else}
+                                <li><strong>{label}:</strong> {value}</li>
+                            {/if}
                         {/each}
                     </ul>
                 </div>

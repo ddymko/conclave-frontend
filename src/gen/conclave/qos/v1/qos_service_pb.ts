@@ -2,8 +2,8 @@
 // @generated from file conclave/qos/v1/qos_service.proto (package conclave.qos.v1, syntax proto3)
 /* eslint-disable */
 
-import type { GenFile, GenService } from "@bufbuild/protobuf/codegenv1";
-import { fileDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
+import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv1";
+import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv1";
 import type { GetQosRequestSchema } from "./get_qos_request_pb";
 import { file_conclave_qos_v1_get_qos_request } from "./get_qos_request_pb";
 import type { GetQosResponseSchema } from "./get_qos_response_pb";
@@ -12,12 +12,45 @@ import type { GetQossRequestSchema } from "./get_qoss_request_pb";
 import { file_conclave_qos_v1_get_qoss_request } from "./get_qoss_request_pb";
 import type { GetQossResponseSchema } from "./get_qoss_response_pb";
 import { file_conclave_qos_v1_get_qoss_response } from "./get_qoss_response_pb";
+import type { QoS } from "./qos_pb";
+import { file_conclave_qos_v1_qos } from "./qos_pb";
+import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file conclave/qos/v1/qos_service.proto.
  */
 export const file_conclave_qos_v1_qos_service: GenFile = /*@__PURE__*/
-  fileDesc("CiFjb25jbGF2ZS9xb3MvdjEvcW9zX3NlcnZpY2UucHJvdG8SD2NvbmNsYXZlLnFvcy52MTKpAQoKUW9zU2VydmljZRJLCgZHZXRRb3MSHi5jb25jbGF2ZS5xb3MudjEuR2V0UW9zUmVxdWVzdBofLmNvbmNsYXZlLnFvcy52MS5HZXRRb3NSZXNwb25zZSIAEk4KB0dldFFvc3MSHy5jb25jbGF2ZS5xb3MudjEuR2V0UW9zc1JlcXVlc3QaIC5jb25jbGF2ZS5xb3MudjEuR2V0UW9zc1Jlc3BvbnNlIgBCQVo/Z2l0aHViLmNvbS9kZHlta28vY29uY2xhdmUtYmFja2VuZC9nZW4vZ28vY29uY2xhdmUvcW9zL3YxO3Fvc3YxYgZwcm90bzM", [file_conclave_qos_v1_get_qos_request, file_conclave_qos_v1_get_qos_response, file_conclave_qos_v1_get_qoss_request, file_conclave_qos_v1_get_qoss_response]);
+  fileDesc("CiFjb25jbGF2ZS9xb3MvdjEvcW9zX3NlcnZpY2UucHJvdG8SD2NvbmNsYXZlLnFvcy52MSI1ChBVcGRhdGVRT1NSZXF1ZXN0EiEKA3FvcxgBIAEoCzIULmNvbmNsYXZlLnFvcy52MS5Rb1MiEwoRVXBkYXRlUU9TUmVzcG9uc2Uy/wEKClFvc1NlcnZpY2USSwoGR2V0UW9zEh4uY29uY2xhdmUucW9zLnYxLkdldFFvc1JlcXVlc3QaHy5jb25jbGF2ZS5xb3MudjEuR2V0UW9zUmVzcG9uc2UiABJOCgdHZXRRb3NzEh8uY29uY2xhdmUucW9zLnYxLkdldFFvc3NSZXF1ZXN0GiAuY29uY2xhdmUucW9zLnYxLkdldFFvc3NSZXNwb25zZSIAElQKCVVwZGF0ZVFPUxIhLmNvbmNsYXZlLnFvcy52MS5VcGRhdGVRT1NSZXF1ZXN0GiIuY29uY2xhdmUucW9zLnYxLlVwZGF0ZVFPU1Jlc3BvbnNlIgBCQVo/Z2l0aHViLmNvbS9kZHlta28vY29uY2xhdmUtYmFja2VuZC9nZW4vZ28vY29uY2xhdmUvcW9zL3YxO3Fvc3YxYgZwcm90bzM", [file_conclave_qos_v1_get_qos_request, file_conclave_qos_v1_get_qos_response, file_conclave_qos_v1_get_qoss_request, file_conclave_qos_v1_get_qoss_response, file_conclave_qos_v1_qos]);
+
+/**
+ * @generated from message conclave.qos.v1.UpdateQOSRequest
+ */
+export type UpdateQOSRequest = Message<"conclave.qos.v1.UpdateQOSRequest"> & {
+  /**
+   * @generated from field: conclave.qos.v1.QoS qos = 1;
+   */
+  qos?: QoS;
+};
+
+/**
+ * Describes the message conclave.qos.v1.UpdateQOSRequest.
+ * Use `create(UpdateQOSRequestSchema)` to create a new message.
+ */
+export const UpdateQOSRequestSchema: GenMessage<UpdateQOSRequest> = /*@__PURE__*/
+  messageDesc(file_conclave_qos_v1_qos_service, 0);
+
+/**
+ * @generated from message conclave.qos.v1.UpdateQOSResponse
+ */
+export type UpdateQOSResponse = Message<"conclave.qos.v1.UpdateQOSResponse"> & {
+};
+
+/**
+ * Describes the message conclave.qos.v1.UpdateQOSResponse.
+ * Use `create(UpdateQOSResponseSchema)` to create a new message.
+ */
+export const UpdateQOSResponseSchema: GenMessage<UpdateQOSResponse> = /*@__PURE__*/
+  messageDesc(file_conclave_qos_v1_qos_service, 1);
 
 /**
  * @generated from service conclave.qos.v1.QosService
@@ -38,6 +71,14 @@ export const QosService: GenService<{
     methodKind: "unary";
     input: typeof GetQossRequestSchema;
     output: typeof GetQossResponseSchema;
+  },
+  /**
+   * @generated from rpc conclave.qos.v1.QosService.UpdateQOS
+   */
+  updateQOS: {
+    methodKind: "unary";
+    input: typeof UpdateQOSRequestSchema;
+    output: typeof UpdateQOSResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_conclave_qos_v1_qos_service, 0);

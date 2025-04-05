@@ -91,6 +91,29 @@
 
     }
 
+
+    let expandedConfigured: string[] = [];
+    jobData.header.nodes.split(",").forEach(part => {
+        expandedConfigured = expandedConfigured.concat(expandRange(part.trim()));
+    });
+
+    function expandRange(rangeStr: string): string[] {
+        const rangeRegex = /(.*)\[(\d+)-(\d+)\]/;
+        const match = rangeStr.match(rangeRegex);
+        if (match) {
+            const prefix = match[1];
+            const start = parseInt(match[2], 10);
+            const end = parseInt(match[3], 10);
+            const results = [];
+            for (let i = start; i <= end; i++) {
+                // Preserve the number format (e.g., '02')
+                const num = i.toString().padStart(match[2].length, '0');
+                results.push(prefix + num);
+            }
+            return results;
+        }
+        return [rangeStr];
+    }
 </script>
 
 <nav class="flex border-b border-gray-200 bg-white" aria-label="Breadcrumb">
@@ -156,13 +179,13 @@
             <div class="px-4 py-5 sm:p-6">
                 <ul class="space-y-2 text-gray-800">
                     <li><span class="font-semibold">Name:</span> {jobData.header.name}</li>
-                    <li><span class="font-semibold">Account:</span> {jobData.header.account}</li>
+                    <li><span class="font-semibold">Account:</span> <a href={`/entities/accounts/${jobData.header.group}`} class="font-bold text-indigo-600 underline hover:text-indigo-800">{jobData.header.group}</a></li>
                     <li><span class="font-semibold">Group:</span> {jobData.header.group}</li>
-                    <li><span class="font-semibold">Partition:</span> {jobData.header.partition}</li>
+                    <li><span class="font-semibold">Partition:</span> <a href={`/cluster/partitions/${jobData.header.partition}`} class="font-bold text-indigo-600 underline hover:text-indigo-800">{jobData.header.partition}</a></li>
                     <li><span class="font-semibold">Cluster:</span> {jobData.header.cluster}</li>
                     <li><span class="font-semibold">Submit Line:</span> {jobData.header.submitLine}</li>
                     <li><span class="font-semibold">Working Directory:</span> {jobData.workingDirectory}</li>
-                    <li><span class="font-semibold">QOS:</span> {jobData.header.qos}</li>
+                    <li><span class="font-semibold">QOS:</span> <a href={`/cluster/qos/${jobData.header.qos}`} class="font-bold text-indigo-600 underline hover:text-indigo-800">{jobData.header.qos}</a></li>
                 </ul>
             </div>
         </div>
@@ -249,7 +272,12 @@
                                     {/if}
                                 </li>
                             {/each}
-                            <span class="font-semibold">Nodes Allocated:</span> {jobData.header.nodes}
+                            <span class="font-semibold">Nodes Allocated:</span>
+                            {#each expandedConfigured as config, index}
+                                <a href={`/cluster/nodes/${config}`} class="font-bold text-indigo-600 underline hover:text-indigo-800">
+                                    {config}
+                                </a>{index < expandedConfigured.length - 1 ? ', ' : ''}
+                            {/each}
                         </ul>
                     </div>
                 </div>
@@ -281,14 +309,14 @@
             </div>
         </section>
         <!-- Action Buttons -->
-        <section class="flex space-x-4">
-            <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">
-                Cancel Job
-            </button>
-            <button class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition">
-                Hold / Resume
-            </button>
-        </section>
+<!--        <section class="flex space-x-4">-->
+<!--            <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition">-->
+<!--                Cancel Job-->
+<!--            </button>-->
+<!--            <button class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition">-->
+<!--                Hold / Resume-->
+<!--            </button>-->
+<!--        </section>-->
     </div>
 {/if}
 {#if selectedTab === "metrics"}

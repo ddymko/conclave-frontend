@@ -165,6 +165,14 @@
                                     Components
                                 </a>
                             </li>
+                            <li>
+                                <a
+                                        href="/cluster/scheduling"
+                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
+                                >
+                                    Scheduling Insights
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
@@ -200,23 +208,6 @@
                                     Jobs Dashboard
                                 </a>
                             </li>
-                            <li>
-                                <a
-                                        href="/jobs/control"
-                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
-                                >
-                                    Interactive Job Control
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        href="/jobs/history"
-                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
-                                >
-                                    Historical Data &amp; Analytics
-                                </a>
-                            </li>
-                        </ul>
                     </li>
 
                     <!-- 3. User-Focused Features -->
@@ -270,80 +261,80 @@
                         </ul>
                     </li>
 
-                    <!-- 4. Admin & Power User Tools -->
-                    <li>
-                        <a
-                                href="#"
-                                class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-white"
-                        >
-                            <svg
-                                    class="size-6 shrink-0"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
-                            >
-                                <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
-                                />
-                            </svg>
-                            Admin &amp; Power User Tools
-                        </a>
-                        <!-- Nested subsections for Admin & Power User Tools -->
-                        <ul class="ml-4 mt-1 space-y-1">
-                            <li>
-                                <a
-                                        href="/admin/cluster-config"
-                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
-                                >
-                                    Cluster Configuration
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        href="/admin/fairshare"
-                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
-                                >
-                                    Fairshare &amp; Accounting
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        href="/admin/reporting"
-                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
-                                >
-                                    Advanced Reporting &amp; Analytics
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                        href="/admin/job-priority"
-                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"
-                                >
-                                    Job Priority &amp; Scheduling Insights
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+<!--                    &lt;!&ndash; 4. Admin & Power User Tools &ndash;&gt;-->
+<!--                    <li>-->
+<!--                        <a-->
+<!--                                href="#"-->
+<!--                                class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-400 hover:bg-gray-800 hover:text-white"-->
+<!--                        >-->
+<!--                            <svg-->
+<!--                                    class="size-6 shrink-0"-->
+<!--                                    fill="none"-->
+<!--                                    viewBox="0 0 24 24"-->
+<!--                                    stroke-width="1.5"-->
+<!--                                    stroke="currentColor"-->
+<!--                                    aria-hidden="true"-->
+<!--                            >-->
+<!--                                <path-->
+<!--                                        stroke-linecap="round"-->
+<!--                                        stroke-linejoin="round"-->
+<!--                                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"-->
+<!--                                />-->
+<!--                            </svg>-->
+<!--                            Power User Tools-->
+<!--                        </a>-->
+<!--                        &lt;!&ndash; Nested subsections for Admin & Power User Tools &ndash;&gt;-->
+<!--                        <ul class="ml-4 mt-1 space-y-1">-->
+<!--                            <li>-->
+<!--                                <a-->
+<!--                                        href="/admin/cluster-config"-->
+<!--                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"-->
+<!--                                >-->
+<!--                                    Cluster Configuration-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a-->
+<!--                                        href="/admin/fairshare"-->
+<!--                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"-->
+<!--                                >-->
+<!--                                    Fairshare &amp; Accounting-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a-->
+<!--                                        href="/admin/reporting"-->
+<!--                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"-->
+<!--                                >-->
+<!--                                    Advanced Reporting &amp; Analytics-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a-->
+<!--                                        href="/power-user/scheduliong"-->
+<!--                                        class="block rounded-md py-1 px-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-white"-->
+<!--                                >-->
+<!--                                    Job Priority &amp; Scheduling Insights-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
 
-                    <!-- Profile Footer -->
-                    <li class="-mx-6 mt-auto">
-                        <a
-                                href="#"
-                                class="flex items-center gap-x-4 px-6 py-3 text-sm/6 font-semibold text-white hover:bg-gray-800"
-                        >
-                            <img
-                                    class="size-8 rounded-full bg-gray-800"
-                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                    alt="User Profile"
-                            >
-                            <span class="sr-only">Your profile</span>
-                            <span aria-hidden="true">Tom Cook</span>
-                        </a>
-                    </li>
+<!--                    &lt;!&ndash; Profile Footer &ndash;&gt;-->
+<!--                    <li class="-mx-6 mt-auto">-->
+<!--                        <a-->
+<!--                                href="#"-->
+<!--                                class="flex items-center gap-x-4 px-6 py-3 text-sm/6 font-semibold text-white hover:bg-gray-800"-->
+<!--                        >-->
+<!--                            <img-->
+<!--                                    class="size-8 rounded-full bg-gray-800"-->
+<!--                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"-->
+<!--                                    alt="User Profile"-->
+<!--                            >-->
+<!--                            <span class="sr-only">Your profile</span>-->
+<!--                            <span aria-hidden="true">Tom Cook</span>-->
+<!--                        </a>-->
+<!--                    </li>-->
                 </ul>
             </nav>
         </div>
